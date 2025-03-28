@@ -1,0 +1,17 @@
+.mynameis {
+    color: white;
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 10vh;
+}
+
+.name {
+    color: white;
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: 20vh;
+}

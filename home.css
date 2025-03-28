@@ -7,7 +7,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: darkgrey;
 }
 
 /* Fullscreen container */
@@ -23,9 +23,9 @@ body, html {
 
 /* Section for dynamic content */
 #content {
-  width: 80%;
-  height: 80%;
-  background-color: #45CCFF;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,12 @@ button {
 button:hover {
   background-color: #ff6347;
 }
+
+
+
+
+
+
 
 
 

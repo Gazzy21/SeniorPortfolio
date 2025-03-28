@@ -18,36 +18,66 @@ $(document).ready(function () {
   }, 3000);
 });
 
-// Sample content data to dynamically change in the section
+
+
+
+
+
+
+// Array of section file paths and their corresponding CSS
 const contentArray = [
-  "Welcome to the First Section!",
-  "This is the Second Section.",
-  "You are now in the Third Section.",
-  "This is the Fourth Section. Enjoy!",
+  { url: "sections/section1.html", style: "styles/section1.css" },
+  { url: "sections/section2.html", style: "styles/section2.css" },
+  { url: "sections/section3.html", style: "styles/section3.css" },
+  { url: "sections/section4.html", style: "styles/section4.css" },
 ];
 
 // Initial content index
 let currentContentIndex = 0;
 
-// Get the content and button elements
-const contentElement = document.getElementById('content');
-const nextButton = document.getElementById('nextButton');
+// Get content and button elements
+const contentElement = document.getElementById("content");
+const nextButton = document.getElementById("nextButton");
 
-// Function to update content
+// Create a link element for dynamic section CSS
+const sectionStyleElement = document.createElement("link");
+sectionStyleElement.rel = "stylesheet";
+sectionStyleElement.type = "text/css";
+document.head.appendChild(sectionStyleElement);
+
+// Function to load and update content and section-specific styles
 function updateContent() {
-  // Set new content based on the current index
-  contentElement.innerHTML = contentArray[currentContentIndex];
+  const section = contentArray[currentContentIndex];
 
-  // If we reach the last item, we can loop back to the first
-  if (currentContentIndex >= contentArray.length - 1) {
-      currentContentIndex = 0; // Reset to the first content
-  } else {
-      currentContentIndex++; // Move to the next content
-  }
+  // Load HTML content dynamically
+  fetch(section.url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load content.");
+      }
+      return response.text();
+    })
+    .then((data) => {
+      contentElement.innerHTML = data;
+
+      // Load section-specific CSS
+      sectionStyleElement.href = section.style;
+
+      // Cycle through content or reset to the first section
+      if (currentContentIndex >= contentArray.length - 1) {
+        currentContentIndex = 0;
+      } else {
+        currentContentIndex++;
+      }
+    })
+    .catch((error) => {
+      contentElement.innerHTML = `<p class="text-danger">Error loading content!</p>`;
+      console.error("Error loading content:", error);
+    });
 }
 
 // Event listener for the "Next" button
-nextButton.addEventListener('click', updateContent);
+nextButton.addEventListener("click", updateContent);
 
-// Initial content setup
+// Initial content setup on page load
 updateContent();
