@@ -1,135 +1,62 @@
-body {
+/* Basic reset */
+body, html {
   margin: 0;
-  background-color: grey;
-  height: 200vh;
-  overflow-x: hidden;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disable scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
-::-webkit-scrollbar {
-  width: 12px; /* Width of the vertical scrollbar */
-  height: 12px; /* Height of the horizontal scrollbar */
+/* Fullscreen container */
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-::-webkit-scrollbar-track {
-  background: #303030; /* Color of the track (the area the scrollbar moves along) */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the thumb (the draggable part of the scrollbar) */
-  border-radius: 10px; /* Rounds the edges of the thumb */
-  border: 3px solid #333; /* Border around the thumb for a better look */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color of the thumb when hovered */
-}
-
-::-webkit-scrollbar-corner {
-  background-color: #333; /* Corner where horizontal and vertical scrollbars meet */
-}
-
-canvas {
-  display: block;
-}
-
-.maindiv {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: white;
-  border: 3px solid black;
-  border-radius: 1rem;
-  font-size: 50px;
-  z-index: 10;
-  background-color: rgb(42, 42, 42);
-  background-image: url("imgs/me.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 45vh;
-  width: 30vw;
-}
-
-.maindiv2 {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  color: white;
-  border: 3px solid black;
-  border-radius: 2rem;
-  font-size: 50px;
-  z-index: 10;
-  background-color: rgb(33, 33, 33);
-  background-position: center;
-  background-size: cover;
-  height: 15vh;
-  width: 55vw;
+/* Section for dynamic content */
+#content {
+  width: 80%;
+  height: 80%;
+  background-color: #45CCFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 48px;
+  border-radius: 10px;
   text-align: center;
-  font-family: "Orbitron", sans-serif;
 }
 
-.maindiv3 {
+/* Button styling */
+.buttons {
   position: absolute;
-  bottom: 10%;
-  right: 5%;
-  color: white;
-  border: 3px solid black;
-  border-radius: 3rem;
-  font-size: 18px;
-  z-index: 10;
-  background-color: rgb(33, 33, 33);
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
-  width: 55vw;
-  padding: 10px; /* Increases internal space */
-  text-align: center;
-  overflow: hidden; /* Ensures no text overflows */
-  word-wrap: break-word; /* Breaks long words to fit */
+  bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #E84B30;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff6347;
 }
 
 
-.headinghr {
-  border: 1px solid white;
-  margin: 0;
-}
 
-.headingnametext {
-  font-size: 5vw;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  font-family: "Orbitron", sans-serif;
-  margin: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.headingnametext:hover {
-  animation-name: spaceOut;
-  animation-duration: 1.75s;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-}
-
-@keyframes spaceOut {
-  from {
-    letter-spacing: normal;
-  }
-  to {
-    letter-spacing: 2vw;
-  }
-}
-
-.headingtext {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  transition: all 0.35s ease-in-out;
-  color: white;
-}
-
-.headingtext:hover {
-  color: black;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff;
-}
 
 div#loader-container img {
   max-width: 500px;
