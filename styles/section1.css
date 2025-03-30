@@ -15,3 +15,22 @@
     font-style: normal;
     font-size: 20vh;
 }
+
+/* Initial hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Slide in from left */
+.show-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from right */
+.show-right {
+    opacity: 1;
+    transform: translateX(0);
+}

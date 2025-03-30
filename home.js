@@ -1,8 +1,5 @@
-$(document).ready(function () {
-  function showLoadingScreen() {
-    $(".splash-wrapper").fadeIn(1500); // Fade in the loading screen
-  }
-
+$(window).on("load", function () {
+  // Hide the loading screen once everything is loaded
   function hideLoadingScreen() {
     $(".splash-wrapper").fadeOut(1500); // Fade out the loading screen
   }
@@ -13,9 +10,17 @@ $(document).ready(function () {
     $(".menudiv").show();
   }
 
-  setTimeout(function () {
-    hideLoadingScreen(); // Initially hide the loading screen
-  }, 3000);
+  // Hide the loading screen after everything is loaded
+  hideLoadingScreen();
+});
+
+// Show the loading screen immediately when the page starts loading
+$(document).ready(function () {
+  function showLoadingScreen() {
+    $(".splash-wrapper").fadeIn(1500); // Fade in the loading screen
+  }
+
+  showLoadingScreen(); // Show the loading screen while content loads
 });
 
 
@@ -81,3 +86,4 @@ nextButton.addEventListener("click", updateContent);
 
 // Initial content setup on page load
 updateContent();
+
