@@ -10,17 +10,6 @@ body, html {
   background-color: darkgrey;
 }
 
-/* Fullscreen container */
-#container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 /* Section for dynamic content */
 #content {
   width: 100vw;
