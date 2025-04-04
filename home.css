@@ -1,26 +1,37 @@
 /* Basic reset */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Disable scrolling */
+  overflow: hidden;
+  /* Disable scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkgrey;
 }
 
 /* Section for dynamic content */
 #content {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+
   display: flex;
   justify-content: center;
   align-items: center;
   color: #FFF;
   font-size: 48px;
   text-align: center;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Make sure the video stays in the background */
 }
 
 /* Button styling */
@@ -37,10 +48,308 @@ button {
   color: #fff;
   border: none;
   border-radius: 5px;
+  z-index: 10;
 }
 
 button:hover {
   background-color: #ff6347;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #323232;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 13s ease-in forwards infinite;
+  z-index: 0;
+}
+
+undefined .background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 51vw;
+  top: 78vh;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 2s;
+  left: 82vw;
+  top: 74vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 4s;
+  left: 80vw;
+  top: 32vh;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 6s;
+  left: 46vw;
+  top: 91vh;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 8s;
+  left: 90vw;
+  top: 85vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(5) {
+  animation-delay: 10s;
+  left: 7vw;
+  top: 15vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(6) {
+  animation-delay: 12s;
+  left: 37vw;
+  top: 24vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(7) {
+  animation-delay: 14s;
+  left: 53vw;
+  top: 67vh;
+}
+
+.background li:nth-child(8) {
+  animation-delay: 16s;
+  left: 61vw;
+  top: 29vh;
+}
+
+.background li:nth-child(9) {
+  animation-delay: 18s;
+  left: 67vw;
+  top: 71vh;
+}
+
+.background li:nth-child(10) {
+  animation-delay: 20s;
+  left: 16vw;
+  top: 80vh;
+}
+
+.background li:nth-child(11) {
+  animation-delay: 22s;
+  left: 76vw;
+  top: 35vh;
+}
+
+.background li:nth-child(12) {
+  animation-delay: 24s;
+  left: 95vw;
+  top: 96vh;
+}
+
+.background li:nth-child(13) {
+  animation-delay: 26s;
+  left: 35vw;
+  top: 11vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(14) {
+  animation-delay: 28s;
+  left: 22vw;
+  top: 55vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(15) {
+  animation-delay: 30s;
+  left: 59vw;
+  top: 19vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(16) {
+  animation-delay: 32s;
+  left: 62vw;
+  top: 68vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(17) {
+  animation-delay: 34s;
+  left: 79vw;
+  top: 21vh;
+}
+
+.background li:nth-child(18) {
+  animation-delay: 36s;
+  left: 87vw;
+  top: 42vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(19) {
+  animation-delay: 38s;
+  left: 33vw;
+  top: 45vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(20) {
+  animation-delay: 40s;
+  left: 87vw;
+  top: 59vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(21) {
+  animation-delay: 42s;
+  left: 99vw;
+  top: 2vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(22) {
+  animation-delay: 44s;
+  left: 28vw;
+  top: 84vh;
+}
+
+.background li:nth-child(23) {
+  animation-delay: 46s;
+  left: 40vw;
+  top: 94vh;
+}
+
+.background li:nth-child(24) {
+  animation-delay: 48s;
+  left: 19vw;
+  top: 6vh;
+}
+
+.background li:nth-child(25) {
+  animation-delay: 50s;
+  left: 10vw;
+  top: 34vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(26) {
+  animation-delay: 52s;
+  left: 14vw;
+  top: 49vh;
+}
+
+.background li:nth-child(27) {
+  animation-delay: 54s;
+  left: 3vw;
+  top: 61vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(28) {
+  animation-delay: 56s;
+  left: 48vw;
+  top: 76vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(29) {
+  animation-delay: 58s;
+  left: 9vw;
+  top: 87vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(30) {
+  animation-delay: 60s;
+  left: 93vw;
+  top: 54vh;
+}
+
+.background li:nth-child(31) {
+  animation-delay: 62s;
+  left: 65vw;
+  top: 99vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(32) {
+  animation-delay: 64s;
+  left: 74vw;
+  top: 63vh;
+}
+
+.background li:nth-child(33) {
+  animation-delay: 66s;
+  left: 20vw;
+  top: 13vh;
+}
+
+.background li:nth-child(34) {
+  animation-delay: 68s;
+  left: 72vw;
+  top: 7vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(35) {
+  animation-delay: 70s;
+  left: 0vw;
+  top: 25vh;
+}
+
+.background li:nth-child(36) {
+  animation-delay: 72s;
+  left: 55vw;
+  top: 51vh;
+}
+
+.background li:nth-child(37) {
+  animation-delay: 74s;
+  left: 31vw;
+  top: 3vh;
+  border-color: #3d3d3d;
+}
+
+.background li:nth-child(38) {
+  animation-delay: 76s;
+  left: 27vw;
+  top: 43vh;
+}
+
+.background li:nth-child(39) {
+  animation-delay: 78s;
+  left: 44vw;
+  top: 39vh;
+  border-color: #3d3d3d;
 }
 
 
@@ -55,13 +364,17 @@ button:hover {
 div#loader-container img {
   max-width: 500px;
 }
+
 /* Loader animation styles */
 .splash-wrapper {
-  display: none; /* Initially hidden */
+  display: none;
+  /* Initially hidden */
   position: fixed;
   z-index: 9999;
-  background: url("imgs/boxloader.png") no-repeat center center; /* Correct usage of background property */
-  background-size: cover; /* Ensures the image covers the entire area */
+  background: url("imgs/boxloader.png") no-repeat center center;
+  /* Correct usage of background property */
+  background-size: cover;
+  /* Ensures the image covers the entire area */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -87,6 +400,7 @@ div#loader-container img {
   div#loader-container {
     background-size: cover;
   }
+
   div#loader-container img {
     max-width: 300px;
   }
@@ -101,6 +415,7 @@ div#loader-container img {
   letter-spacing: 4px;
   box-sizing: border-box;
 }
+
 .loader::before {
   content: "";
   position: absolute;
@@ -113,6 +428,7 @@ div#loader-container img {
   box-sizing: border-box;
   animation: animloader1 1s linear infinite alternate;
 }
+
 .loader::after {
   content: "";
   width: 4px;
@@ -130,6 +446,7 @@ div#loader-container img {
     top: 8px;
     transform: rotate(0deg) scale(1);
   }
+
   100% {
     top: 0px;
     transform: rotate(180deg) scale(1.5);
@@ -140,6 +457,7 @@ div#loader-container img {
   0% {
     box-shadow: 0 0 inset;
   }
+
   100% {
     box-shadow: 0 -28px inset;
   }
@@ -169,6 +487,5 @@ div#loader-container img {
   color: black;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
-    cursor: pointer;
+  cursor: pointer;
 }
-
