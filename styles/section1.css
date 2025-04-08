@@ -14,12 +14,27 @@
     font-weight: <weight>;
     font-style: normal;
     font-size: 20vh;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.next-page-area-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35vw; /* Adjust the width as needed */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Optional, just to see the area */
+    z-index: 9999; /* Ensure it’s always on top */
+    cursor: pointer;
 }
 
 /* Initial hidden state */
 .hidden {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards; /* Fade in effect */
+    animation: fadeIn 1s ease-in-out forwards;
+    /* Fade in effect */
 }
 
 /* Keyframe for the fade-in animation */
@@ -27,6 +42,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
