@@ -37,12 +37,11 @@ const contentArray = [
   { url: "sections/section4.html", style: "styles/section4.css" },
 ];
 
-// Initial content index
+// Initial content index (start at section 1)
 let currentContentIndex = 0;
 
-// Get content and button elements
+// Get content element
 const contentElement = document.getElementById("content");
-const nextButton = document.getElementById("nextButton");
 
 // Create a link element for dynamic section CSS
 const sectionStyleElement = document.createElement("link");
@@ -51,39 +50,53 @@ sectionStyleElement.type = "text/css";
 document.head.appendChild(sectionStyleElement);
 
 // Function to load and update content and section-specific styles
-function updateContent() {
+function updateContent(direction = 1) {
+  // Ensure the index is correct before loading content
   const section = contentArray[currentContentIndex];
 
-  // Load HTML content dynamically
-  fetch(section.url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to load content.");
-      }
-      return response.text();
-    })
-    .then((data) => {
-      contentElement.innerHTML = data;
+  // Start fade-out
+  contentElement.classList.add("fade-out");
 
-      // Load section-specific CSS
-      sectionStyleElement.href = section.style;
+  setTimeout(() => {
+    // Update index based on direction (+1 for next, -1 for previous)
+    currentContentIndex += direction;
 
-      // Cycle through content or reset to the first section
-      if (currentContentIndex >= contentArray.length - 1) {
-        currentContentIndex = 0;
-      } else {
-        currentContentIndex++;
-      }
-    })
-    .catch((error) => {
-      contentElement.innerHTML = `<p class="text-danger">Error loading content!</p>`;
-      console.error("Error loading content:", error);
-    });
+    // Handle wrapping of index
+    if (currentContentIndex >= contentArray.length) {
+      currentContentIndex = 0;  // Go to first section if at the end
+    } else if (currentContentIndex < 0) {
+      currentContentIndex = contentArray.length - 1;  // Go to last section if at the beginning
+    }
+
+    const newSection = contentArray[currentContentIndex];
+
+    // Load HTML content dynamically
+    fetch(newSection.url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load content.");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        contentElement.innerHTML = data;
+
+        // Load section-specific CSS
+        sectionStyleElement.href = newSection.style;
+
+        // Fade-in after replacing content
+        contentElement.classList.remove("fade-out");
+      })
+      .catch((error) => {
+        contentElement.innerHTML = `<p class="text-danger">Error loading content!</p>`;
+        contentElement.classList.remove("fade-out");
+        console.error("Error loading content:", error);
+      });
+  }, 500); // Delay matches CSS transition duration
 }
 
-// Event listener for the "Next" button
-nextButton.addEventListener("click", updateContent);
-
 // Initial content setup on page load
-updateContent();
-
+document.addEventListener("DOMContentLoaded", () => {
+  // Start by loading the first section's content and styles
+  updateContent(0);  // Just to ensure the content loads from section 1
+});

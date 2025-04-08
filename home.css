@@ -9,12 +9,14 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #1b1b1b;
 }
 
 /* Section for dynamic content */
 #content {
   width: 100vw;
   height: 100vh;
+  background-color: #1b1b1b;
   background: #1b1b1b;
   display: flex;
   justify-content: center;
@@ -22,6 +24,13 @@ html {
   color: #FFF;
   font-size: 48px;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  min-height: 100vh; /* prevents collapse if content is empty */
+}
+
+#content.fade-out {
+  opacity: 0;
 }
 
 /* Button styling */
