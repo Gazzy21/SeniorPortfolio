@@ -29,12 +29,12 @@ $(document).ready(function () {
 
 
 
-// Array of section file paths and their corresponding CSS
+// Array of section file paths and their corresponding CSS and JS
 const contentArray = [
-  { url: "sections/section1.html", style: "styles/section1.css" },
-  { url: "sections/section2.html", style: "styles/section2.css" },
-  { url: "sections/section3.html", style: "styles/section3.css" },
-  { url: "sections/section4.html", style: "styles/section4.css" },
+  { url: "sections/section1.html", style: "styles/section1.css", script: "scripts/section1.js" },
+  { url: "sections/section2.html", style: "styles/section2.css", script: "scripts/section2.js" },
+  { url: "sections/section3.html", style: "styles/section3.css", script: "scripts/section3.js" },
+  { url: "sections/section4.html", style: "styles/section4.css", script: "scripts/section4.js" },
 ];
 
 // Initial content index (start at section 1)
@@ -49,42 +49,54 @@ sectionStyleElement.rel = "stylesheet";
 sectionStyleElement.type = "text/css";
 document.head.appendChild(sectionStyleElement);
 
-// Function to load and update content and section-specific styles
+// Placeholder for current script element
+let sectionScriptElement = null;
+
+// Function to load and update content, styles, and scripts
 function updateContent(direction = 1) {
-  // Ensure the index is correct before loading content
   const section = contentArray[currentContentIndex];
 
-  // Start fade-out
+  // Start fade-out animation
   contentElement.classList.add("fade-out");
 
   setTimeout(() => {
-    // Update index based on direction (+1 for next, -1 for previous)
+    // Update index
     currentContentIndex += direction;
 
-    // Handle wrapping of index
+    // Wrap around if needed
     if (currentContentIndex >= contentArray.length) {
-      currentContentIndex = 0;  // Go to first section if at the end
+      currentContentIndex = 0;
     } else if (currentContentIndex < 0) {
-      currentContentIndex = contentArray.length - 1;  // Go to last section if at the beginning
+      currentContentIndex = contentArray.length - 1;
     }
 
     const newSection = contentArray[currentContentIndex];
 
-    // Load HTML content dynamically
+    // Load HTML content
     fetch(newSection.url)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to load content.");
-        }
+        if (!response.ok) throw new Error("Failed to load content.");
         return response.text();
       })
       .then((data) => {
+        // Inject HTML
         contentElement.innerHTML = data;
 
-        // Load section-specific CSS
+        // Update CSS
         sectionStyleElement.href = newSection.style;
 
-        // Fade-in after replacing content
+        // Remove previous script if exists
+        if (sectionScriptElement) {
+          sectionScriptElement.remove();
+        }
+
+        // Add new JS script
+        sectionScriptElement = document.createElement("script");
+        sectionScriptElement.src = newSection.script;
+        sectionScriptElement.defer = true; // optional: ensures it doesn't block rendering
+        document.body.appendChild(sectionScriptElement);
+
+        // Fade in
         contentElement.classList.remove("fade-out");
       })
       .catch((error) => {
@@ -92,11 +104,13 @@ function updateContent(direction = 1) {
         contentElement.classList.remove("fade-out");
         console.error("Error loading content:", error);
       });
-  }, 500); // Delay matches CSS transition duration
+  }, 500); // Match transition delay
 }
 
-// Initial content setup on page load
+// Initial content setup
 document.addEventListener("DOMContentLoaded", () => {
-  // Start by loading the first section's content and styles
-  updateContent(0);  // Just to ensure the content loads from section 1
+  updateContent(0);
 });
+
+
+

@@ -2,10 +2,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 35vw; /* Adjust the width as needed */
+    width: 10vw;
+    /* Adjust the width as needed */
     height: 100%;
     /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
-    z-index: 9999; /* Ensure it’s always on top */
+    z-index: 9999;
+    /* Ensure it’s always on top */
     cursor: pointer;
 }
 
@@ -13,9 +15,11 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 35vw; /* Adjust the width as needed */
+    width: 10vw;
+    /* Adjust the width as needed */
     height: 100%;
     /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
-    z-index: 9999; /* Ensure it’s always on top */
+    z-index: 9999;
+    /* Ensure it’s always on top */
     cursor: pointer;
 }
