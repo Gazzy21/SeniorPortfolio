@@ -89,9 +89,6 @@
 }
 
 .skillcard1 {
-    position: absolute;
-    top: 50;
-    left: 15;
     z-index: 10;
     height: 35vh;
     width: 15vw;
@@ -99,9 +96,6 @@
 }
 
 .skillcard2 {
-    position: absolute;
-    top: 50;
-    right: 15;
     z-index: 10;
     height: 35vh;
     width: 15vw;
