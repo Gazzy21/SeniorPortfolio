@@ -87,17 +87,3 @@
     0 0 400px rgba(0, 255, 0, 0.8),
     0 0 500px rgba(0, 255, 0, 1);
 }
-
-.skillcard1 {
-    z-index: 10;
-    height: 35vh;
-    width: 15vw;
-    background: #151515;
-}
-
-.skillcard2 {
-    z-index: 10;
-    height: 35vh;
-    width: 15vw;
-    background: #151515;
-}
