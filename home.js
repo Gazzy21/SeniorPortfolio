@@ -113,4 +113,65 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Function to load and update content, styles, and scripts (backwards version)
+function updateContentBack(direction = -1) { // Changed function name and default direction to -1
+  const section = contentArray[currentContentIndex];
+
+  // Start fade-out animation
+  contentElement.classList.add("fade-out");
+
+  setTimeout(() => {
+    // Update index
+    currentContentIndex += direction;
+
+    // Wrap around if needed
+    if (currentContentIndex >= contentArray.length) {
+      currentContentIndex = 0;
+    } else if (currentContentIndex < 0) {
+      currentContentIndex = contentArray.length - 1;
+    }
+
+    const newSection = contentArray[currentContentIndex];
+
+    // Load HTML content
+    fetch(newSection.url)
+      .then((response) => {
+        if (!response.ok) throw new Error("Failed to load content.");
+        return response.text();
+      })
+      .then((data) => {
+        // Inject HTML
+        contentElement.innerHTML = data;
+
+        // Update CSS
+        sectionStyleElement.href = newSection.style;
+
+        // Remove previous script if exists
+        if (sectionScriptElement) {
+          sectionScriptElement.remove();
+        }
+
+        // Add new JS script
+        sectionScriptElement = document.createElement("script");
+        sectionScriptElement.src = newSection.script;
+        sectionScriptElement.defer = true; // optional: ensures it doesn't block rendering
+        document.body.appendChild(sectionScriptElement);
+
+        // Fade in
+        contentElement.classList.remove("fade-out");
+      })
+      .catch((error) => {
+        contentElement.innerHTML = `<p class="text-danger">Error loading content!</p>`;
+        contentElement.classList.remove("fade-out");
+        console.error("Error loading content:", error);
+      });
+  }, 500); // Match transition delay
+}
+
+// Initial content setup
+document.addEventListener("DOMContentLoaded", () => {
+  updateContentBack(0); // This will still start the initial load
+});
+
+
 
