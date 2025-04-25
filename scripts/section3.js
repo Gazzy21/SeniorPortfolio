@@ -1,28 +1,30 @@
-const block = document.querySelectorAll('.block');
+$(function(){
 
-window.addEventListener('load', function () {
-    block.forEach(item => {
-        let numElement = item.querySelector('.num');
-        let num = parseInt(numElement.innerText);
-        let count = 0;
-        let time = 2000 / num;
-        let circle = item.querySelector('.circle');
-
-        setInterval(() => {
-            if (count === num) {
-                clearInterval();
-            } else {
-                count += 1;
-                numElement.innerText = count;
-            }
-        }, time);
-
-        circle.style.strokeDashoffset = 503 - (503 * (num / 100));
-        let dots = item.querySelector('.dots');
-        dots.style.transform = `rotate(${360 * (num / 100)}deg)`;
-
-        if (num === 100) {
-            dots.style.opacity = 0;
-        }
+    // Remove svg.radial-progress .complete inline styling
+    $('svg.radial-progress').each(function( index, value ) { 
+        $(this).find($('circle.complete')).removeAttr( 'style' );
     });
+
+    // Activate progress animation on scroll
+    $(window).scroll(function(){
+        $('svg.radial-progress').each(function( index, value ) { 
+            // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
+            if ( 
+                $(window).scrollTop() > $(this).offset().top - ($(window).height() * 0.75) &&
+                $(window).scrollTop() < $(this).offset().top + $(this).height() - ($(window).height() * 0.25)
+            ) {
+                // Get percentage of progress
+                percent = $(value).data('percentage');
+                // Get radius of the svg's circle.complete
+                radius = $(this).find($('circle.complete')).attr('r');
+                // Get circumference (2πr)
+                circumference = 2 * Math.PI * radius;
+                // Get stroke-dashoffset value based on the percentage of the circumference
+                strokeDashOffset = circumference - ((percent * circumference) / 100);
+                // Transition progress for 1.25 seconds
+                $(this).find($('circle.complete')).animate({'stroke-dashoffset': strokeDashOffset}, 1250);
+            }
+        });
+    }).trigger('scroll');
+
 });
