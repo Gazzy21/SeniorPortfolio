@@ -169,3 +169,42 @@ svg.radial-progress.js circle {
 svg.radial-progress.java circle {
     stroke: #fd6470;
 }
+
+.progress-bar {
+    position: absolute;
+    top: 95%;
+    text-align: center;
+    z-index: 1000;
+    height: 20px;
+    width: 20vw;
+    background: white;
+    border-radius: 25px;
+    border: 2px solid white;
+    background-color: blue);
+    box-shadow: 0 0 32px white;
+}
+
+.progress-fill {
+    position: absolute;
+    height: 20px;
+    width: 25%;
+    animation: progress-forward 2s;
+    animation-fill-mode: forwards;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg,
+            rgb(238, 238, 238) 0%,
+            rgb(173, 173, 173) 100%);
+    border-radius: 15px;
+}
+
+@keyframes progress-forward {
+    0% {
+        width: 25%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+;
