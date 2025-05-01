@@ -187,7 +187,7 @@ svg.radial-progress.java circle {
 .progress-fill {
     position: absolute;
     height: 20px;
-    width: 25%;
+    width: 50%;
     animation: progress-forward 2s;
     animation-fill-mode: forwards;
     background: rgb(255, 255, 255);
@@ -199,11 +199,11 @@ svg.radial-progress.java circle {
 
 @keyframes progress-forward {
     0% {
-        width: 25%;
+        width: 50%;
     }
 
     100% {
-        width: 50%;
+        width: 75%;
     }
 }
 
