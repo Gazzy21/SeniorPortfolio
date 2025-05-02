@@ -107,18 +107,39 @@
 
 .skillcardhtml {
     left: 2.5%;
+    transition: transform 0.3s ease;
+}
+
+.skillcardhtml:hover {
+    transform: scale(1.20);
 }
 
 .skillcardcss {
     left: 22%;
+    transition: transform 0.3s ease;
+}
+
+.skillcardcss:hover {
+    transform: scale(1.20);
 }
 
 .skillcardjs {
     right: 22%;
+    transition: transform 0.3s ease;
+}
+
+.skillcardjs:hover {
+    transform: scale(1.20);
 }
 
 .skillcardjava {
     right: 2.5%;
+    transition: transform 0.3s ease;
+}
+
+.skillcardjava:hover {
+    transform: scale(1.20);
+
 }
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
@@ -208,3 +229,12 @@ svg.radial-progress.java circle {
 }
 
 ;
+
+.transparentbg {
+    background-color: none;
+}
+
+.skillcardhtml ul {
+    max-height: 200px;
+    overflow-y: auto;
+}
