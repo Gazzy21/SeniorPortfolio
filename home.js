@@ -15,7 +15,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
     hideLoadingScreen(); // Initially hide the loading screen
-  }, 3000);
+  }, 1500);
 });
 
 

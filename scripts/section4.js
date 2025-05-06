@@ -13,9 +13,8 @@
 
     function init() {
         resize();
-        move(Math.floor(items.length / 2));
+        move(1); // Start at first slide
         bindEvents();
-
         timer();
     }
 

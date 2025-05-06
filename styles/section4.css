@@ -142,10 +142,14 @@ body>.carousel {
 
 .carousel__prev {
     left: 40%;
+    height: 10vh;
+    width: 10vw;
 }
 
 .carousel__next {
     right: 40%;
+    height: 10vh;
+    width: 10vw;
 }
 
 .carousel__body {
@@ -230,4 +234,15 @@ body>.carousel {
     border-right-width: 5px;
     transform: translate3d(-1px, 0, -40px) rotateY(90deg);
     transform-origin: 100%;
+}
+
+.websitename {
+    color: white;
+    position: absolute;
+    top: 14%;
+}
+
+.bigpicsum {
+    height: 100%;
+    width: 100%;
 }
