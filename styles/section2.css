@@ -1,27 +1,25 @@
 .back-page-area-left {
     position: fixed;
-    top: 0;
-    left: 0;
+    bottom: 2%;
+    left: 2%;
     width: 10vw;
-    /* Adjust the width as needed */
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
+    height: 15%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid gray;
+    border-radius: 10px;
     z-index: 9999;
-    /* Ensure it’s always on top */
-    cursor: pointer;
 }
 
 .next-page-area-right {
     position: fixed;
-    top: 0;
-    right: 0;
+    bottom: 2%;
+    right: 2%;
     width: 10vw;
-    /* Adjust the width as needed */
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
+    height: 15%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid gray;
+    border-radius: 10px;
     z-index: 9999;
-    /* Ensure it’s always on top */
-    cursor: pointer;
 }
 
 .progress-bar {

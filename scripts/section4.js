@@ -53,12 +53,12 @@
         slider.style.transform = "translate3d(" + ((index * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
     }
 
-    function timer() {
-        clearInterval(interval);
-        interval = setInterval(() => {
-            move(++currIndex);
-        }, intervalTime);
-    }
+    // function timer() {
+    //     clearInterval(interval);
+    //     interval = setInterval(() => {
+    //         move(++currIndex);
+    //     }, intervalTime);
+    // }
 
     function prev() {
         move(--currIndex);

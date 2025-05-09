@@ -1,28 +1,25 @@
-/* General layout and styling */
 .back-page-area-left {
     position: fixed;
-    top: 0;
-    left: 0;
+    bottom: 2%;
+    left: 2%;
     width: 10vw;
-    /* Adjust the width as needed */
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
+    height: 15%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid gray;
+    border-radius: 10px;
     z-index: 9999;
-    /* Ensure it’s always on top */
-    cursor: pointer;
 }
 
 .next-page-area-right {
     position: fixed;
-    top: 0;
-    right: 0;
+    bottom: 2%;
+    right: 2%;
     width: 10vw;
-    /* Adjust the width as needed */
-    height: 100%;
-    /* background: rgba(0, 0, 0, 0.1); Optional, just to see the area */
+    height: 15%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid gray;
+    border-radius: 10px;
     z-index: 9999;
-    /* Ensure it’s always on top */
-    cursor: pointer;
 }
 
 /* cube */
@@ -95,7 +92,10 @@
 /* skillcards */
 
 /* Skill card layout */
-.skillcardhtml, .skillcardcss, .skillcardjs, .skillcardjava {
+.skillcardhtml,
+.skillcardcss,
+.skillcardjs,
+.skillcardjava {
     position: absolute;
     height: 60vh;
     width: 15vw;
@@ -151,18 +151,24 @@ svg.radial-progress {
     transform: rotate(-90deg);
     width: 100%;
 }
+
 svg.radial-progress circle {
-    fill: rgba(0,0,0,0);
+    fill: rgba(0, 0, 0, 0);
     stroke: #fff;
-    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-dashoffset: 219.91148575129;
+    /* Circumference */
     stroke-width: 10;
 }
+
 svg.radial-progress circle.incomplete {
     opacity: 0.25;
 }
+
 svg.radial-progress circle.complete {
-    stroke-dasharray: 219.91148575129; /* Circumference */
+    stroke-dasharray: 219.91148575129;
+    /* Circumference */
 }
+
 svg.radial-progress text {
     fill: #fff;
     font: 2vh 'Oswald', sans-serif;

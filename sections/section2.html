@@ -2,48 +2,54 @@
 <html lang="en">
 
 <head>
-    <title>Drag and Drop Puzzle</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.3.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- Bootstrap CSS v5.3.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <!-- Global Custom CSS -->
-    <link rel="stylesheet" href="home.css" />
-    
-    <!-- Include the three.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.0/build/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+  <!-- Global Custom CSS -->
+  <link rel="stylesheet" href="home.css" />
+
+  <!-- Include the three.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
 </head>
 
 <body>
-    <div class="back-page-area-left" onclick="updateContentBack()" style="cursor: pointer;"></div>
-    <nav class="navbar bg-body-secondary fixed-top p-4">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">NG</span>
-        </div>
-    </nav>
-    <script type="module" src="scripts/section2.js">
+  <!-- section2.html -->
+  <canvas id="3D-background-three-canvas5"></canvas>
 
-    </script>
-    <div class="progress-bar">
-        <div class="progress-fill"></div>
+  <nav class="navbar bg-body-secondary fixed-top p-4">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">NG</span>
     </div>
-    <div class="next-page-area-right" onclick="updateContent()" style="cursor: pointer;"></div>
+  </nav>
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
 
-    <!-- Load script.js for the puzzle -->
-    <script src="section2.js"></script>
+  <div class="next-page-area-right" onclick="updateContent()" style="cursor: pointer;">
+    <img class="far" src="imgs/chevleft.png" alt="">
+  </div>
+  <div class="back-page-area-left" onclick="updateContentBack()" style="cursor: pointer;">
+    <img class="far" src="imgs/chevright.png" alt="">
+  </div>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <!-- Load script.js for the puzzle -->
+  <script src="section2.js"></script>
 </body>
 
 </html>
