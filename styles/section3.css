@@ -236,11 +236,12 @@ svg.radial-progress.java circle {
 
 ;
 
-.transparentbg {
-    background-color: none;
-}
-
 .skillcardhtml ul {
     max-height: 200px;
     overflow-y: auto;
+}
+
+.far {
+    width: 100%;
+    height: 100%;
 }
