@@ -61,94 +61,47 @@
 
 ;
 
-:root {
-    --color-primary: #81ecec;
-    --color-background: #222222;
-    --width: 800px;
-}
-
-ol,
-li {
-    margin: 0;
-    padding: 0;
-    color: #00cec9;
-    font-family: verdana;
-    font-size: 14px;
-}
-
-ol {
-    display: flex;
-    width: 800px;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 10%;
-}
-
-ol::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #81ecec;
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    transform: translate(1.85%, -50%);
-}
-
-li {
-    list-style-type: none;
-    position: relative;
-    cursor: pointer;
-}
-
-li::after {
-    content: '';
-    display: block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #505050;
-    border: 2px solid #81ecec;
-    transition: background-color 0.2s ease;
-}
-
-li:hover::after {
-    /* Approximated mix of #81ecec and #222222 */
-    background-color: #4ca5a5;
-}
-
-li.active::after {
-    background-color: #ffffff;
-}
-
-span {
-    position: absolute;
-    top: calc(100% + 20px);
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    /* 800px / 8 */
-}
-
 .aboutmecontainer {
     height: 60vh;
     width: 100vw;
     display: flex;
-    align-items: center;    /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
-    gap: 2vw; /* Optional: space between image and text */
+    align-items: center;
+    /* Vertical centering */
+    justify-content: center;
+    /* Horizontal centering */
+    gap: 2vw;
+    /* Optional: space between image and text */
 }
 
 .smallertext {
     font-size: large;
 }
 
-.imagediv, .textdiv {
-    background-color: #ffffff;
-    border: 1px solid #00cec9; /* You were missing a border style */
-    border-radius: 1vw;
-    padding: 1rem; /* Optional: adds spacing inside the divs */
+.imagediv {
+    background-image: url("imgs/me.jpg");
+}
+
+.imagediv,
+.textdiv {
+    background-color: #292929;
+    border: 1px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#131219, #131219) padding-box, linear-gradient(var(--angle),
+            #070707,
+            #687aff) border-box;
+    animation: 5s rotate linear infinite;
+    padding: 1rem;
+    /* Optional: adds spacing inside the divs */
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
