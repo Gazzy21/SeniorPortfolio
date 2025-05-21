@@ -162,7 +162,7 @@ div#loader-container img {
 
 .menuHeader {
   font-family: "Orbitron", sans-serif;
-  font-size: 8vw;
+  font-size: 5vw;
 }
 
 .menuItem {
@@ -181,3 +181,123 @@ div#loader-container img {
     cursor: pointer;
 }
 
+.menu-list{
+  width:350px;
+  min-height:400px;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  transform: rotateY(10deg) rotateX(-5deg);
+  transform-style: preserve-3d;
+  perspective: 10000px;
+}
+
+.item-container{
+  position:relative;
+  transform-style: preserve-3d;
+  perspective: 10000px;
+  padding:5px 35px;
+}
+
+
+.item-container:hover .item{
+  cursor:pointer;
+  transform: rotateY(-380deg);
+  background:rgb(168, 235, 23);
+  box-shadow:0px 0px 30px 10px rgb(177, 235, 52);
+}
+
+.item-container:hover .top{
+  background: rgb(168, 235, 23);
+}
+
+.item-container:hover .right{
+  background: rgb(168, 235, 23);
+}
+
+.item-container:hover .bottom{
+  background: rgb(102, 148, 4);
+}
+
+.item-container:hover .left{
+  background: rgb(158, 207, 56);
+}
+
+.item-container:hover .back{
+  background: rgb(168, 235, 23);
+}
+
+.item{
+  position:relative;
+  width:100%;
+  height:110px;
+  background:rgb(90, 15, 150);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Roboto', sans-serif;
+  font-size:27px;
+  color: white;
+  transform-style: preserve-3d;
+  perspective: 10000px;
+  transform: rotateY(20deg);
+  transition:0.7s ease-in-out;
+}
+
+.top{
+  position:absolute;
+  width:100%;
+  height:110px;
+  top:-110px;
+  background:rgb(100, 24, 161);
+  transform: rotateX(90deg);
+  transform-origin:bottom;
+  transform-style: preserve-3d;
+  perspective: 10000px;
+}
+
+.right{
+  position:absolute;
+  width:110px;
+  height:100%;
+  right: -110px;
+  background: inherit;
+  background:rgb(74, 5, 130);
+  transform: rotateY(90deg);
+  transform-origin:left;
+  filter:blur(1px);
+}
+
+.bottom{
+  position:absolute;
+  width:100%;
+  height:110px;
+  bottom:-110px;
+  background:inherit;
+  transform: rotateX(-90deg);
+  transform-origin:top;
+  filter:blur(1px);
+}
+
+.left{
+  position:absolute;
+  width:110px;
+  height:100%;
+  left:-110px;
+  background:rgb(61, 7, 105);
+  transform: rotateY(-90deg);
+  transform-origin:right;
+  filter:blur(1px);
+}
+
+.back{
+  position:absolute;
+  width:100%;
+  height:110px;
+  top:-110px;
+  background:inherit;
+  transform: rotateX(90deg);
+  transform-origin:bottom;
+  filter:blur(1px);
+}
