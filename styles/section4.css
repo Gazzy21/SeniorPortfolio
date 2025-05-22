@@ -30,6 +30,10 @@
     border: 2px solid #e0e1e4;
 }
 
+.navlogo {
+  height: 30px;
+}
+
 .progress-bar {
     position: absolute;
     top: 95%;
@@ -40,7 +44,7 @@
     background: white;
     border-radius: 25px;
     border: 2px solid white;
-    background-color: blue);
+    background-color: blue;
     box-shadow: 0 0 32px white;
 }
 

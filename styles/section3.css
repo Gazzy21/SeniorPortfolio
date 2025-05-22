@@ -30,6 +30,10 @@
     border: 2px solid #e0e1e4;
 }
 
+.navlogo {
+  height: 30px;
+}
+
 /* cube */
 
 .cube {

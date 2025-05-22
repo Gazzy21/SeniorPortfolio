@@ -35,6 +35,10 @@
     height: 100%;
 }
 
+.navlogo {
+    height: 30px;
+}
+
 .progress-bar {
     position: absolute;
     top: 95%;
@@ -70,7 +74,9 @@
     100% {
         width: 50%;
     }
-};
+}
+
+;
 
 @keyframes rotate {
     to {
@@ -86,4 +92,12 @@
 
 .meimg {
     background-image: url("imgs/me.jpg");
+}
+
+.content-text {
+ margin-top: 10px;
+ padding-left: 10px;
+ font-family: Arial, sans-serif;
+ font-size: 20px;
+ line-height: 1.6;
 }
