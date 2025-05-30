@@ -24,55 +24,58 @@
     <img class="far" src="imgs/chevleft.png" alt="">
   </div>
   <nav class="navbar bg-body-secondary fixed-top p-4">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">
-                <a href="index.html">
-                <img class="navlogo" src="imgs/ngLogo.png">
-                </a>
-            </span>
-        </div>
-    </nav>
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">
+        <a href="index.html">
+          <img class="navlogo" src="imgs/ngLogo.png">
+        </a>
+      </span>
+    </div>
+  </nav>
 
   <div class="container my-4">
     <!-- First Row: Two Equal Columns -->
-    <div class="row">
+    <div class="row g-4">
       <div class="col-6">
-        <div class="p-3">
-          <img class="img-fluid border" src="imgs/me.jpg">
+        <div class="modern-card p-3">
+          <img class="img-fluid profile-image" src="imgs/me.jpg" alt="Profile Picture">
         </div>
       </div>
       <div class="col-6">
-        <div class="p-3 border bg-dark content-text">
+        <div class="modern-card p-4 content-text" id="infoContent">
           <h1>Overview</h1>
           <hr>
           <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-                <li>I'm a High School Student with over 3 years of experience in various coding and web development technologies.</li>
-                <li>Currently going into The College of New Jersey to aquire my Bachelor Computer Science Degree, I'm all about learning code and software to make a difference.</li>
-                <li>I have worked in many team situations before and worked on websites that have real use within my school community.</li>
-                <li>I enjoy automating workflows, optimizing code, and turning complex challenges into real results.</li>
-                <li>I'm always curious and constantly excited to continue learning.</li>
-            </ul>
+            <li>I'm a High School Student with over 3 years of experience in various coding and web development
+              technologies.</li>
+            <li>Currently going into The College of New Jersey to acquire my Bachelor Computer Science Degree, I'm all
+              about learning code and software to make a difference.</li>
+            <li>I have worked in many team situations before and worked on websites that have real use within my school
+              community.</li>
+            <li>I enjoy automating workflows, optimizing code, and turning complex challenges into real results.</li>
+            <li>I'm always curious and constantly excited to continue learning.</li>
+          </ul>
         </div>
       </div>
     </div>
 
     <!-- Second Row: Full Width Column -->
-    <div class="row mt-3">
-  <div class="col-12">
-    <div class="p-3 border bg-dark">
-      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btnradio1">Overview</label>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="modern-card p-4">
+          <div class="modern-btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="modern-btn" for="btnradio1"><span>Overview</span></label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio2">Education</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="modern-btn" for="btnradio2"><span>Education</span></label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio3">Goals</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="modern-btn" for="btnradio3"><span>Goals</span></label>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
 
   <div class="progress-bar">
