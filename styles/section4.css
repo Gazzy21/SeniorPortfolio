@@ -1,37 +1,80 @@
-.back-page-area-left {
+/* Modern minimalist navigation arrows */
+.back-page-area-left,
+.next-page-area-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
     position: fixed;
     bottom: 2%;
-    left: 2%;
-    width: 10vw;
-    height: 15%;
-    background: rgba(0, 0, 0, 0.1);
-    border: 2px solid rgb(63, 63, 63);
-    border-radius: 10px;
     z-index: 9999;
+    overflow: hidden;
 }
 
-.back-page-area-left:hover {
-    border: 2px solid #e0e1e4;
+.back-page-area-left {
+    left: 2%;
 }
 
 .next-page-area-right {
-    position: fixed;
-    bottom: 2%;
     right: 2%;
-    width: 10vw;
-    height: 15%;
-    background: rgba(0, 0, 0, 0.1);
-    border: 2px solid rgb(63, 63, 63);
-    border-radius: 10px;
-    z-index: 9999;
 }
 
+.back-page-area-left::before,
+.next-page-area-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-page-area-left:hover,
 .next-page-area-right:hover {
-    border: 2px solid #e0e1e4;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+.back-page-area-left:hover::before,
+.next-page-area-right:hover::before {
+    opacity: 1;
+}
+
+.back-page-area-left:active,
+.next-page-area-right:active {
+    transform: translateY(0);
+    scale: 0.98;
+}
+
+.back-arrow,
+.next-arrow {
+    width: 20px;
+    height: 20px;
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.back-page-area-left:hover .back-arrow {
+    color: #6366f1;
+    transform: translateX(-2px);
+}
+
+.next-page-area-right:hover .next-arrow {
+    color: #6366f1;
+    transform: translateX(2px);
 }
 
 .navlogo {
-  height: 30px;
+    height: 30px;
 }
 
 .progress-bar {

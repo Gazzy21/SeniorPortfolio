@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Nick Guzzone</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,8 +21,11 @@
 </head>
 
 <body>
+    <!-- Back Navigation Button -->
     <div class="back-page-area-left" onclick="updateContentBack()">
-        <img class="far" src="imgs/chevleft.png" alt="">
+        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
     </div>
     <nav class="navbar bg-body-secondary fixed-top p-4">
         <div class="container-fluid">
@@ -31,6 +34,7 @@
                 <img class="navlogo" src="imgs/ngLogo.png">
                 </a>
             </span>
+            <h2><a class="text-decoration-none text-black" href="contact.html">Contact</a></h2>
         </div>
     </nav>
     <h1 class="websitename">Website Name</h1>
@@ -139,8 +143,11 @@
     <div class="progress-bar">
         <div class="progress-fill"></div>
     </div>
-    <div class="next-page-area-right" onclick="updateContent()" style="cursor: pointer;">
-        <img class="far" src="imgs/chevright.png" alt="">
+    <!-- Next Navigation Button -->
+    <div class="next-page-area-right" onclick="updateContent()">
+        <svg class="next-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
     </div>
 
     <!-- Bootstrap JavaScript Libraries -->

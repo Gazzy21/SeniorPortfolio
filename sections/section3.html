@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Nick Guzzone</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,129 +16,137 @@
 </head>
 
 <body>
+    <!-- Back Navigation Button -->
     <div class="back-page-area-left" onclick="updateContentBack()">
-        <img class="far" src="imgs/chevleft.png" alt="">
+        <svg class="back-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
     </div>
     <nav class="navbar bg-body-secondary fixed-top p-4">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">
                 <a href="index.html">
-                <img class="navlogo" src="imgs/ngLogo.png">
+                    <img class="navlogo" src="imgs/ngLogo.png">
                 </a>
             </span>
+            <h2><a class="text-decoration-none text-black" href="contact.html">Contact</a></h2>
         </div>
     </nav>
-    <div class="skillcardhtml">
-        <svg class="radial-progress html" data-percentage="100" viewBox="0 0 80 80">
-            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 167.13272917097697;"></circle>
-            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">HTML</text>
-        </svg>
 
-        <div class="html-skills"
-            style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
-            <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-                <li><strong>100% Proficiency in HTML5</strong> – Semantic tags & best practices</li>
-                <li><strong>Responsive Layouts</strong> – Mobile-first, adaptive design ready</li>
-                <li><strong>Modular Structure</strong> – Clean, reusable code blocks</li>
-                <li><strong>Accessibility Aware</strong> – ARIA roles & inclusive markup</li>
-                <li><strong>SEO-Friendly Markup</strong> – Optimized for search engines</li>
-                <li><strong>Testing & Validation</strong> – W3C-compliant HTML</li>
-                <li><strong>Integration Ready</strong> – Works smoothly with CSS & JS</li>
-            </ul>
-        </div>
-    </div>
-    <div class="skillcardcss">
-        <svg class="radial-progress css" data-percentage="100" viewBox="0 0 80 80">
-            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
-            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">CSS</text>
-        </svg>
-
-        <div class="css-skills"
-            style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
-            <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-                <li><strong>Mastery of CSS3</strong> – Fully skilled in modern layout systems (Flexbox, Grid)</li>
-                <li><strong>Responsive Design</strong> – Media queries and fluid design expertise</li>
-                <li><strong>Custom Animations</strong> – Keyframe animations and transitions</li>
-                <li><strong>Utility-First Styling</strong> – Clean classes and scalable architecture</li>
-                <li><strong>Cross-Browser Compatibility</strong> – Ensures consistent appearance across major browsers
-                </li>
-                <li><strong>Framework Integration</strong> – Works seamlessly with Bootstrap and utility libraries</li>
-                <li><strong>Preprocessor Knowledge</strong> – Experience with SCSS for scalable styling</li>
-            </ul>
-        </div>
-    </div>
-    <div class="skillcardjs">
-        <svg class="radial-progress js" data-percentage="75" viewBox="0 0 80 80">
-            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
-            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">JavaS.</text>
-        </svg>
-
-        <div class="js-skills"
-            style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
-            <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-                <li><span class="me-1"></span><strong>Good Understanding of ES6+</strong> – Let/const, arrow functions,
-                    template literals</li>
-                <li><span class="me-1"></span><strong>DOM Manipulation</strong> – Handles dynamic content and
-                    event-driven interaction</li>
-                <li><span class="me-1"></span><strong>Form Validation</strong> – Client-side validation and error
-                    handling</li>
-                <li><span class="me-1"></span><strong>Async Programming</strong> – Basic use of Promises and `fetch()`
-                    API</li>
-                <li><span class="me-1"></span><strong>JSON & APIs</strong> – Parsing JSON and integrating RESTful APIs
-                </li>
-                <li><span class="me-1"></span><strong>Project Structure</strong> – Writes modular and reusable functions
-                </li>
-                <li><span class="me-1"></span><strong>Interactive UI Elements</strong> – Toggles, sliders, tabs, and
-                    more</li>
-            </ul>
-        </div>
-    </div>
-    <div class="skillcardjava">
-        <svg class="radial-progress java" data-percentage="50" viewBox="0 0 80 80">
-            <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-            <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
-            <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">Java</text>
-        </svg>
-
-        <div class="java-skills"
-            style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
-            <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-                <li><span class="me-1"></span><strong>OOP Basics</strong> – Understands classes, objects, inheritance,
-                    and polymorphism</li>
-                <li><span class="me-1"></span><strong>Core Java Syntax</strong> – Proficient with loops, conditionals,
-                    and methods</li>
-                <li><span class="me-1"></span><strong>Exception Handling</strong> – Can use try-catch and basic error
-                    flow</li>
-                <li><span class="me-1"></span><strong>Collections Framework</strong> – Familiar with ArrayList, HashMap,
-                    etc.</li>
-                <li><span class="me-1"></span><strong>Basic File I/O</strong> – Reads and writes data using standard
-                    streams</li>
-                <li><span class="me-1"></span><strong>Intro to GUI/CLI Apps</strong> – Experience building small
-                    console-based projects</li>
-                <li><span class="me-1"></span><strong>Foundations for Growth</strong> – Actively building toward
-                    advanced topics like multithreading and JDBC</li>
-            </ul>
-        </div>
-    </div>
     <main>
-        <div class="cube">
-            <div class="top"></div>
-            <div>
-                <span style="--i:0;"></span>
-                <span style="--i:1;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:3;"></span>
+        <div class="skillcardhtml">
+            <svg class="radial-progress html" data-percentage="100" viewBox="0 0 80 80">
+                <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 167.13272917097697;"></circle>
+                <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">HTML</text>
+            </svg>
+
+            <div class="html-skills"
+                style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <ul>
+                    <li><strong>100% Proficiency in HTML5</strong> – Semantic tags & best practices</li>
+                    <li><strong>Responsive Layouts</strong> – Mobile-first, adaptive design ready</li>
+                    <li><strong>Modular Structure</strong> – Clean, reusable code blocks</li>
+                    <li><strong>Accessibility Aware</strong> – ARIA roles & inclusive markup</li>
+                    <li><strong>SEO-Friendly Markup</strong> – Optimized for search engines</li>
+                    <li><strong>Testing & Validation</strong> – W3C-compliant HTML</li>
+                    <li><strong>Integration Ready</strong> – Works smoothly with CSS & JS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="skillcardcss">
+            <svg class="radial-progress css" data-percentage="100" viewBox="0 0 80 80">
+                <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">CSS</text>
+            </svg>
+
+            <div class="css-skills">
+                <ul>
+                    <li><strong>Mastery of CSS3</strong> – Fully skilled in modern layout systems (Flexbox, Grid)</li>
+                    <li><strong>Responsive Design</strong> – Media queries and fluid design expertise</li>
+                    <li><strong>Custom Animations</strong> – Keyframe animations and transitions</li>
+                    <li><strong>Utility-First Styling</strong> – Clean classes and scalable architecture</li>
+                    <li><strong>Cross-Browser Compatibility</strong> – Ensures consistent appearance across major
+                        browsers
+                    </li>
+                    <li><strong>Framework Integration</strong> – Works seamlessly with Bootstrap and utility libraries
+                    </li>
+                    <li><strong>Preprocessor Knowledge</strong> – Experience with SCSS for scalable styling</li>
+                </ul>
+            </div>
+        </div>
+        <div class="skillcardjs">
+            <svg class="radial-progress js" data-percentage="75" viewBox="0 0 80 80">
+                <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">JavaS.</text>
+            </svg>
+
+            <div class="js-skills"
+                style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <ul>
+                    <li><span class="me-1"></span><strong>Good Understanding of ES6+</strong> – Let/const, arrow
+                        functions,
+                        template literals</li>
+                    <li><span class="me-1"></span><strong>DOM Manipulation</strong> – Handles dynamic content and
+                        event-driven interaction</li>
+                    <li><span class="me-1"></span><strong>Form Validation</strong> – Client-side validation and error
+                        handling</li>
+                    <li><span class="me-1"></span><strong>Async Programming</strong> – Basic use of Promises and
+                        `fetch()`
+                        API</li>
+                    <li><span class="me-1"></span><strong>JSON & APIs</strong> – Parsing JSON and integrating RESTful
+                        APIs
+                    </li>
+                    <li><span class="me-1"></span><strong>Project Structure</strong> – Writes modular and reusable
+                        functions
+                    </li>
+                    <li><span class="me-1"></span><strong>Interactive UI Elements</strong> – Toggles, sliders, tabs, and
+                        more</li>
+                </ul>
+            </div>
+        </div>
+        <div class="skillcardjava">
+            <svg class="radial-progress java" data-percentage="50" viewBox="0 0 80 80">
+                <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">Java</text>
+            </svg>
+
+            <div class="java-skills"
+                style="margin-top: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <ul>
+                    <li><span class="me-1"></span><strong>OOP Basics</strong> – Understands classes, objects,
+                        inheritance,
+                        and polymorphism</li>
+                    <li><span class="me-1"></span><strong>Core Java Syntax</strong> – Proficient with loops,
+                        conditionals,
+                        and methods</li>
+                    <li><span class="me-1"></span><strong>Exception Handling</strong> – Can use try-catch and basic
+                        error
+                        flow</li>
+                    <li><span class="me-1"></span><strong>Collections Framework</strong> – Familiar with ArrayList,
+                        HashMap,
+                        etc.</li>
+                    <li><span class="me-1"></span><strong>Basic File I/O</strong> – Reads and writes data using standard
+                        streams</li>
+                    <li><span class="me-1"></span><strong>Intro to GUI/CLI Apps</strong> – Experience building small
+                        console-based projects</li>
+                    <li><span class="me-1"></span><strong>Foundations for Growth</strong> – Actively building toward
+                        advanced topics like multithreading and JDBC</li>
+                </ul>
             </div>
         </div>
     </main>
     <div class="progress-bar">
         <div class="progress-fill"></div>
     </div>
-    <div class="next-page-area-right" onclick="updateContent()" style="cursor: pointer;">
-        <img class="far" src="imgs/chevright.png" alt="">
+    <!-- Next Navigation Button -->
+    <div class="next-page-area-right" onclick="updateContent()">
+        <svg class="next-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
     </div>
 
     <!-- Bootstrap JavaScript Libraries -->
