@@ -2,18 +2,17 @@ const content = {
     overview: `
       <h1>Overview</h1>
       <hr>
-      <ul style="list-style-type: '🔹 '; padding-left: 1em;">
-        <li>I'm a High School Student with over 3 years of experience in various coding and web development technologies.</li>
-        <li>Currently going into The College of New Jersey to acquire my Bachelor Computer Science Degree, I'm all about learning code and software to make a difference.</li>
-        <li>I have worked in many team situations before and worked on websites that have real use within my school community.</li>
-        <li>I enjoy automating workflows, optimizing code, and turning complex challenges into real results.</li>
-        <li>I'm always curious and constantly excited to continue learning.</li>
+      <ul>
+        <li>I'm a high school student with over 3 years of experience in various coding and web development technologies.</li>
+            <li>I'm all about learning code and software to make a difference.</li>
+            <li>I've worked on real-use websites in my school and am experienced in collaborative environments.</li>
+            <li>I'm always curious and eager to keep learning, and love solving complex challenges.</li>
       </ul>
     `,
     education: `
       <h1>Education</h1>
       <hr>
-      <ul style="list-style-type: '🔹 '; padding-left: 1em;">
+      <ul>
         <li>Graduated from Marlboro High School in 2025.</li>
         <li>Attending The College of New Jersey (Class of 2029) majoring in Computer Science.</li>
         <li>Completed multiple AP courses in STEM areas and participated in coding web design based internship.</li>
@@ -23,10 +22,9 @@ const content = {
     goals: `
       <h1>Goals</h1>
       <hr>
-      <ul style="list-style-type: '🔹 '; padding-left: 1em;">
+      <ul>
         <li>Graduate with a strong GPA and real-world coding experience.</li>
         <li>Intern at a top tech company to learn professional software development practices.</li>
-        <li>Contribute to open-source projects and grow my GitHub portfolio.</li>
         <li>Build applications that solve real problems in my community and beyond.</li>
         <li>Never stop learning and improving as a programmer and problem solver.</li>
       </ul>
