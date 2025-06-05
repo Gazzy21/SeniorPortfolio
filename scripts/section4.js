@@ -33,11 +33,17 @@
     }
 
     function move(index) {
-
         if (index < 1) index = items.length;
         if (index > items.length) index = 1;
         currIndex = index;
-
+    
+        // Change h1 text
+        var websiteName = document.querySelector('.websitename');
+        var newTitle = items[index - 1].getAttribute('data-title');
+        if (websiteName && newTitle) {
+            websiteName.textContent = newTitle;
+        }
+    
         for (var i = 0; i < items.length; i++) {
             let item = items[i],
                 box = item.getElementsByClassName('item__3d-frame')[0];
@@ -49,7 +55,7 @@
                 box.style.transform = "perspective(1200px) rotateY(" + (i < (index - 1) ? 40 : -40) + "deg)";
             }
         }
-
+    
         slider.style.transform = "translate3d(" + ((index * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
     }
 
